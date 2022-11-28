@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '.\gui.ui'
+# Form implementation generated from reading ui file 'gui.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -191,18 +191,33 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.ventas)
         self.stock = QtWidgets.QWidget()
         self.stock.setObjectName("stock")
+        self.pushButton_24 = QtWidgets.QPushButton(self.stock)
+        self.pushButton_24.setGeometry(QtCore.QRect(40, 30, 75, 23))
+        self.pushButton_24.setObjectName("pushButton_24")
         self.stackedWidget.addWidget(self.stock)
         self.gastos = QtWidgets.QWidget()
         self.gastos.setObjectName("gastos")
+        self.pushButton_23 = QtWidgets.QPushButton(self.gastos)
+        self.pushButton_23.setGeometry(QtCore.QRect(50, 40, 75, 23))
+        self.pushButton_23.setObjectName("pushButton_23")
         self.stackedWidget.addWidget(self.gastos)
         self.estadisticas = QtWidgets.QWidget()
         self.estadisticas.setObjectName("estadisticas")
+        self.pushButton_22 = QtWidgets.QPushButton(self.estadisticas)
+        self.pushButton_22.setGeometry(QtCore.QRect(70, 60, 75, 23))
+        self.pushButton_22.setObjectName("pushButton_22")
         self.stackedWidget.addWidget(self.estadisticas)
         self.historial = QtWidgets.QWidget()
         self.historial.setObjectName("historial")
+        self.pushButton_21 = QtWidgets.QPushButton(self.historial)
+        self.pushButton_21.setGeometry(QtCore.QRect(190, 60, 75, 23))
+        self.pushButton_21.setObjectName("pushButton_21")
         self.stackedWidget.addWidget(self.historial)
         self.ajustes = QtWidgets.QWidget()
         self.ajustes.setObjectName("ajustes")
+        self.pushButton_20 = QtWidgets.QPushButton(self.ajustes)
+        self.pushButton_20.setGeometry(QtCore.QRect(100, 60, 75, 23))
+        self.pushButton_20.setObjectName("pushButton_20")
         self.stackedWidget.addWidget(self.ajustes)
         self.horizontalLayout.addWidget(self.stackedWidget)
         MainWindow.setCentralWidget(self.centralwidget)
@@ -262,6 +277,11 @@ class Ui_MainWindow(object):
         self.pushButton_16.setText(_translate("MainWindow", "redondear"))
         self.pushButton_18.setText(_translate("MainWindow", "Atras"))
         self.pushButton_19.setText(_translate("MainWindow", "Atras"))
+        self.pushButton_24.setText(_translate("MainWindow", "Atras"))
+        self.pushButton_23.setText(_translate("MainWindow", "Atras"))
+        self.pushButton_22.setText(_translate("MainWindow", "Atras"))
+        self.pushButton_21.setText(_translate("MainWindow", "Atras"))
+        self.pushButton_20.setText(_translate("MainWindow", "Atras"))
 
 
 if __name__ == "__main__":

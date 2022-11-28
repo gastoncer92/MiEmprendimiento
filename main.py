@@ -1,16 +1,48 @@
-# This is a sample Python script.
+# -*- coding: utf-8 -*-
 
-# Press Mayús+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from PyQt5.QtWidgets import QApplication
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+from gui import *
 
 
-# Press the green button in the gutter to run the script.
+class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
+
+    def __init__(self):
+        QtWidgets.QMainWindow.__init__(self)
+        self.setupUi(self)
+        self.pushButton.clicked.connect(self.productos)
+        self.pushButton_2.clicked.connect(self.vender)
+        self.pushButton_3.clicked.connect(self.stock)
+        self.pushButton_4.clicked.connect(self.gastos)
+        self.pushButton_5.clicked.connect(self.estadisticas)
+        self.pushButton_9.clicked.connect(self.historial)
+        self.pushButton_7.clicked.connect(self.ajustes)
+
+    def productos(self):
+        self.stackedWidget.setCurrentIndex(1)
+        pass
+
+    def vender(self):
+        self.stackedWidget.setCurrentIndex(4)
+
+    def stock(self):
+        self.stackedWidget.setCurrentIndex(6)
+
+    def gastos(self):
+        self.stackedWidget.setCurrentIndex(7)
+
+    def estadisticas(self):
+        self.stackedWidget.setCurrentIndex(8)
+
+    def historial(self):
+        self.stackedWidget.setCurrentIndex(9)
+
+    def ajustes(self):
+        self.stackedWidget.setCurrentIndex(10)
+
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    app = QApplication([])
+    gui = MainWindow()
+    gui.show()
+    app.exec_()
