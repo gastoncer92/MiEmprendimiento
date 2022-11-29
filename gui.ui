@@ -337,7 +337,20 @@
          </rect>
         </property>
         <property name="text">
-         <string>Atras</string>
+         <string>inicio</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_27">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>30</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>atras</string>
         </property>
        </widget>
       </widget>
@@ -705,6 +718,123 @@
         </property>
         <property name="text">
          <string>Atras</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_11">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>50</y>
+          <width>47</width>
+          <height>13</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Ajustes</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_12">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>110</y>
+          <width>104</width>
+          <height>13</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Base de datos actual:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_13">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>110</y>
+          <width>116</width>
+          <height>13</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>nombre_base_de_datos</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_14">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>140</y>
+          <width>106</width>
+          <height>13</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Nueva base de datos:</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_25">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>170</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Examinar</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_13">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>140</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="placeholderText">
+         <string>nombre...</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_26">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>140</y>
+          <width>87</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>crear y conectar</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_15">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>180</y>
+          <width>167</width>
+          <height>13</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Conectar base de datos existente:</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_28">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>310</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>test</string>
         </property>
        </widget>
       </widget>
