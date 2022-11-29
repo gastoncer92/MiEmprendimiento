@@ -711,7 +711,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QLabel" name="label_11">
+     <widget class="QLabel" name="estado">
       <property name="text">
        <string>TextLabel</string>
       </property>

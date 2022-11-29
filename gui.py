@@ -220,9 +220,9 @@ class Ui_MainWindow(object):
         self.pushButton_20.setObjectName("pushButton_20")
         self.stackedWidget.addWidget(self.ajustes)
         self.verticalLayout.addWidget(self.stackedWidget)
-        self.label_11 = QtWidgets.QLabel(self.centralwidget)
-        self.label_11.setObjectName("label_11")
-        self.verticalLayout.addWidget(self.label_11)
+        self.estado = QtWidgets.QLabel(self.centralwidget)
+        self.estado.setObjectName("estado")
+        self.verticalLayout.addWidget(self.estado)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 21))
@@ -285,7 +285,7 @@ class Ui_MainWindow(object):
         self.pushButton_22.setText(_translate("MainWindow", "Atras"))
         self.pushButton_21.setText(_translate("MainWindow", "Atras"))
         self.pushButton_20.setText(_translate("MainWindow", "Atras"))
-        self.label_11.setText(_translate("MainWindow", "TextLabel"))
+        self.estado.setText(_translate("MainWindow", "TextLabel"))
 
 
 if __name__ == "__main__":

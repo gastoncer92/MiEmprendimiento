@@ -2,7 +2,7 @@
 
 from PyQt5.QtWidgets import QApplication
 
-from basura.gui import *
+from gui import *
 
 
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
@@ -10,10 +10,34 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
         QtWidgets.QMainWindow.__init__(self)
         self.setupUi(self)
-        self.pushButton.clicked.connect(self.accion1)
-    def accion1(self):
-        print("dddd")
-        self.lab
+        self.estado.setText("")
+
+        # productos
+        self.pushButton_6.clicked.connect(self.ir_a_inicio)
+        self.pushButton_17.clicked.connect(self.ir_a_inicio)
+        self.pushButton.clicked.connect(self.ir_a_productos)
+        self.pushButton_8.clicked.connect(self.ir_a_productoNuevo)
+
+        # Ajustes
+        self.pushButton_7.clicked.connect(self.ir_a_ajustes)
+        self.pushButton_20.clicked.connect(self.ir_a_inicio)
+
+
+    # metodos productos
+    def ir_a_productos(self):
+        self.estado.setText("Ir a productos")
+        self.stackedWidget.setCurrentIndex(1)
+    def ir_a_inicio(self):
+        self.stackedWidget.setCurrentIndex(0)
+    def ir_a_productoNuevo(self):
+        self.estado.setText("Ir a productos")
+        self.stackedWidget.setCurrentIndex(2)
+
+    # metodos ajustes
+    def ir_a_ajustes(self):
+        self.estado.setText("Ir a ventana de ajustes")
+        self.stackedWidget.setCurrentIndex(10)
+
 
 
 if __name__ == '__main__':
