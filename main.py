@@ -12,6 +12,10 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         self.estado.setText("")
 
+        # iniciar la base desde configuraciones
+        nombreBase = activarBase()
+        self.label_13.setText(nombreBase)
+
         # productos
         self.pushButton_6.clicked.connect(self.ir_a_inicio)
         self.pushButton_17.clicked.connect(self.ir_a_inicio)
@@ -47,6 +51,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 if __name__ == '__main__':
     # base de datos de ajustes
     ajustes()
+
     app = QApplication([])
     gui = MainWindow()
     gui.show()
