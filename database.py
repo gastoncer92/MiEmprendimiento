@@ -42,14 +42,19 @@ def conexion():
 def ajustes():
     ''' Creacion de base de datos para las configuraciones '''
     conn = conexionAjustes()
-    cur = conn.cursor()
-    cur.executescript("""
+    cursor = conn.cursor()
+    cursor.executescript("""
     CREATE TABLE IF NOT EXISTS [Ajustes] (
         [idAjuste] INTEGER  NOT NULL PRIMARY KEY AUTOINCREMENT,
         [nombreBase] VARCHAR(55)  NULL,
-        [costoFijo] VARCHAR(55)  NULL,
-        [rutaBase] VARCHAR(250)  NULL)
+        [rutaBase] VARCHAR(250)  NULL);
     """)
+    datos=len(cursor.execute("SELECT * FROM Ajustes").fetchall())
+    print(datos)
+    if len(cursor.execute("SELECT * FROM Ajustes").fetchall()) != 1:
+        cursor.execute("INSERT INTO Ajustes (nombreBase, rutaBase) VALUES ('no hay base conectada','')")
+    else:
+        pass
     conn.commit()
     conn.close()
 
@@ -62,11 +67,13 @@ def activarBase():
     conn = sqlite3.connect('data/configuracion.db')
     cursor = conn.cursor()
     consulta = "select nombreBase from Ajustes where idAjuste=1"
+    # nombreBaseDeDatos = cursor.execute(consulta).fetchall()[0]
     try:
-        nombreBaseDeDatos = cursor.execute(consulta).fetchall()[0]
+        nombreBaseDeDatos = cursor.execute(consulta).fetchall()[0][0]
+        print(nombreBaseDeDatos)
         conn.close()
         return nombreBaseDeDatos
-    except:
+    except IndexError:
         return "no hay base conectada"
 
 
@@ -98,12 +105,14 @@ def productos():
         """)
     conn.commit()
     conn.close()
+def GuardarProducto(dato):
+    conn=conexion()
+    cursor=conn.cursor()
 
-
-def CostoFijo():
-    conn = conexion()
-    cursor = conn.cursor()
-    consulta = "select costoFijo from Ajustes where idAjuste=1"
-    resultado = cursor.execute(consulta).fetchall()[0]
-    conn.close()
-    return resultado
+    consulta="""
+        insert into Productos 
+            (nombreProducto,detalle,materialesCosto,
+            costoVariable,costoFijo,MargenGanancia,
+            precio,tiempoFabricacion)
+                VALUES ((?),(?),(?),(?),(?),(?),(?),(?))
+            """
